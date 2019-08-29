@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <title>Compra</title>
+        <script type = "text/javascript">
+
+            window.onload = function(){
+                var prec = JSON.parse(window.localStorage.getItem('prec'));
+
+  var x = prec.madeira;
+  var y = prec.grafite;
+  var z = prec.grafcor;
+  var w = prec.borracha;
+
+  document.getElementById("madeira").innerHTML = x; 
+  document.getElementById("grafite").innerHTML = y;
+  document.getElementById("grafcor").innerHTML = z; 
+  document.getElementById("borracha").innerHTML = w;
+            makeactive(1); 
+            makeactivecontent(1);
+            }
+            </script>
+
+        <script type="text/javascript" src="EventPick.js"></script> 
+    <style type = "text/css">
+
+    body {
+        background-image: url("vend.jpg");
+        background-repeat: no-repeat;
+           height:100%;
+    background-position: center;
+	background-size: 100% 100%;
+   
+        }
+        table{
+           
+            font-size: 35px;
+            color: white;
+            background-color:rgba(0, 0, 255, 0.233);
+        }
+    </style>
+
+</head>
+<body>
+  
+  
+    <div class = "bg"></div>
+    <table>
+            <tr>
+                    <td>Madeira  : </td>    
+                    <td id = "madeira" style = "background-color:red "></td>  
+                    <td><button class="button" style="height: 60px ;width:60px ;" onclick ="madeira(true)" >+</button></td>
+                   
+            </tr>
+            <tr>
+                <td>Grafite : </td>    
+                <td id = "grafite" style = "background-color:red "></td> 
+                <td><button class="button" style="height: 60px ;width:60px ;"onclick ="grafite(true)" >+</button></td>
+                <td></td>
+            </tr>
+            <tr>
+                    <td>Grafite Colorido :  </td>  
+                    <td id = "grafcor" style = "background-color:red "> R$</td>    
+                    <td><button class="button" style="height: 60px ;width:60px ;"onclick ="grafcor(true)" >+</button></td>
+                   
+            </tr>
+            <tr>
+                    <td>borracha   :    </td>   
+                    <td id = "borracha" style = "background-color:red "> R$</td>     
+                <td><button class="button" style="height: 60px ;width:60px ;"onclick ="borracha(true)" >+</button></td>
+            </tr>
+        </table>
+</body>
+
+</html>

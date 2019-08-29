@@ -1,0 +1,91 @@
+
+<html>
+  <head>
+     <title>O Jogo - Login</title>
+      <style>
+*{
+   margin:0;
+   padding:0;
+}
+  .button{
+  width: 230;
+  height: 50;
+  font-size: 25;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin: 1;
+  cursor: pointer;
+  background:rgb(69, 50, 150);
+  border:none;
+  color:white;
+
+  
+  
+    }
+.textview{
+ width: 220;
+ margin: 5;
+ font-size: 20;  
+ padding: 5;
+ color:#303b50; 
+}
+.footer {
+   background-image: url("ifmlogo.png");
+   position: fixed;
+  height: 150;
+  width: 320;
+  left:10%;
+  bottom: 2%;
+  background-repeat: no-repeat; 
+  
+
+}
+.main{
+   position: absolute;
+   top: 40%;
+   left:70%;
+   transform: translate(-50%)translate(-50%);
+  
+   }
+       .bg{
+   background: linear-gradient(to right,rgb(255, 255, 255),green);
+   height:100%;
+   }
+      </style>
+
+      <script>
+function login(){
+   var exp = document.forms["formu"]["nome"].value;
+   alert("Bem-Vindo(a) "+ exp);
+   var player = { nome: exp, cash: 200,diasrest:11};
+   window.localStorage.setItem('player', JSON.stringify(player));
+
+   var estoque = { madeira:0 ,grafite:0 ,grafcor:0 ,borracha: 0,lapis:0 ,colorido:0, completo:0};
+   window.localStorage.setItem('estoque', JSON.stringify(estoque));
+  
+   var prec = { madeira :10 ,grafite:5 ,grafcor:10 ,borracha: 15,lapis:22 ,colorido:26, completo:40};
+   window.localStorage.setItem('prec', JSON.stringify(prec));
+
+   var variable = {prob: 0.5, rand1: 0, rand2: 0};
+   window.localStorage.setItem('variable', JSON.stringify(variable));
+}
+
+      </script>
+  </head>
+
+  <body> 
+    <div class = "bg"></div>
+    <a href="TeoriaDosJogos.pdf" download="LeiDaOfertaEProcura.pdf" class="footer"> </a>
+   <div class="main">
+
+           <form name="formu" action = "game.html" onsubmit ="login()" method = "POST">
+                   <input type="text" name="nome" class="textview" required>
+               <input type = "submit" value="Enviar" class="button">
+             </form>
+            
+   </div>
+
+    
+     
+  
+</body>
+</html>

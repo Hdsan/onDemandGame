@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>O Jogo</title>
+    <script type="text/javascript" src="EventPick.js"></script>  
+<script type = "text/javascript">
+
+window.onload = function(){
+  var player = JSON.parse(window.localStorage.getItem('player'));
+  document.getElementById("dias").innerHTML = player.diasrest;
+  document.getElementById("money").innerHTML = player.cash;
+  document.getElementById("nome").innerHTML = player.nome;
+}
+</script>
+
+</script>
+ <script language=javascript type="text/javascript">
+
+function newPopupVw(){
+varWindow = window.open (
+'popupmercado.html',
+'pagina',
+"width=350, height=550, top=80, left=110, scrollbars=no " );
+
+}
+function newPopupBuy(){
+varWindow = window.open (
+'compra.html',
+'pagina',
+"width=450, height=270, top=100, left=110, scrollbars=no " );
+
+}
+
+function newPopupFab(){
+varWindow = window.open (
+'fabrica.html',
+'pagina',
+"width=450, height=270, top=100, left=110, scrollbars=no " );
+
+}
+
+function newPopupSell(){
+varWindow = window.open (
+'venda.html',
+'pagina',
+"width=450, height=270, top=100, left=110, scrollbars=no " );
+
+}
+function Menu(){
+varWindow = window.open (
+'login.html',
+'pagina');
+}
+function jornal(){
+varWindow = window.open (
+'jornal.html',
+'pagina',
+"width=350, height=350, top=80, left=110, scrollbars=no " );
+
+}
+</script>
+  
+
+    <style>
+        .bg{
+	   	background-image: url("backs.png");
+		  
+          background-repeat: no-repeat;
+          background-position: center;
+   	      background-size: 100% 100%;
+          background-attachment: fixed;
+
+        }
+        .stilo{
+          font-size: 25;
+          font-family:cursive;
+        }
+        
+        .opcao{
+		background-image: url("op.jpg");
+            width: 40;
+            height: 40%;
+            position: relative;
+            cursor: pointer;
+            font-size: 25;
+            font-family:cursive;
+            margin: 1;
+            padding: 7px;
+          
+        }
+        .main{
+            position: absolute;
+    top:20%;
+    left:88%;
+    transform: translate(-50%)translate(-50%);
+        } 
+
+      .calend{
+       width: 100px;
+       height: 100px;
+           }
+		   .jornal{
+       width: 30;
+       height: 30%;
+	   opacity:0.40;
+           }
+           .musicP{
+             position:absolute;
+             bottom: 0%;
+             right: -10%;
+             background-image: url("op.jpg");
+             
+           }
+      
+           
+
+		   
+    </style>
+
+  </head>
+
+<body class="bg">
+    
+        
+        
+ 
+      <input type = "image" class = "calend" type = "button" src = "calendario.png" onclick="atualiza()">
+      
+      <div id="dias"style="background: #1abc9c; width: 50px;height: 50px; font-size:30px;"></div>
+
+      <div style="background: #1abc9c; width: 50px;height: 40px; font-size:30px;"> dias</div>
+
+      <span id="money" style="background:#e0b94d; width: 60px;height: 40px; font-size:30px;"></span>
+      <span style="font-size: 30px;background:#e0b94d;">R$</span>
+
+        <div class = "main">
+            
+                <form name = "form">
+        <table>
+            <tr>
+			
+                 <td> <input type = "image" class = "opcao" src="buy.png" onclick ="newPopupBuy()" ></td>
+                <td> <input type = "image" class = "opcao" src="p1.png" onclick= "newPopupVw()" ></td>
+                 <td> <input type = "image" class = "opcao" src="venda.png" onclick ="newPopupSell()" ></td>
+               
+            </tr>
+            <tr>
+                    <td><input type = "image" class = "opcao" type="button" src="fabricar.png" onclick ="newPopupFab()"></td>
+                    <td><input type = "image" class = "opcao" type="button" src="voltar.png" onclick ="Menu()"></td>
+                    <td><a href="LeiDaOfertaEProcura.pdf" download="LeiDaOfertaEProcura.pdf">
+                      <img src="opc.png" alt="opc.png" class="opcao">
+                    </a></td>
+                    <td> <input type = "image" class = "jornal" src="newsp.png" onclick ="jornal()" ></td>
+					
+                </tr>
+                <tr>
+                  <span>Empresa </span>
+                  <span id ="nome" style="font-size: 40px; color: black"> </span>
+                </tr>
+        </table>
+        </form>
+      
+          
+</body>
+
+</html>

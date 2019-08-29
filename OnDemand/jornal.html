@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script type = "text/javascript">
+
+                window.onload = function(){
+                  var prec = JSON.parse(window.localStorage.getItem('variable'));
+                  document.getElementById("madeira").innerHTML = prec.rand1;
+                  document.getElementById("grafite").innerHTML = prec.rand2;
+                  document.getElementById("color").innerHTML = prec.rand1;
+                  document.getElementById("borracha").innerHTML = prec.rand2;
+                  document.getElementById("lapis").innerHTML = prec.rand1;
+                  document.getElementById("colorido").innerHTML = prec.rand1;
+                  document.getElementById("comp").innerHTML = prec.rand1;
+               
+                
+                }
+                </script>
+                 <style type = "text/css">
+
+                    body{
+                        font-size: 22px;
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                    }
+                </style>
+    </head>
+    <body>
+        <table>
+                <tr>
+                        <td>Madeira  : </td>    
+                        <td id = "madeira"></td>  
+                        <td>R$</td>
+                </tr>
+                <tr>
+                        <td>Grafite  : </td>    
+                        <td id = "grafite"></td>  
+                        <td>R$</td>
+                </tr>
+                <tr>
+                        <td>Grafite Colorido  : </td>    
+                        <td id = "color"></td>  
+                        <td>R$</td>
+                </tr>
+                <tr>
+                        <td>borracha  : </td>    
+                        <td id = "borracha"></td>  
+                        <td>R$</td>
+                       
+                </tr>
+                <tr>
+                        <td>Lápis  : </td>    
+                        <td id = "lapis"></td>  
+                        <td>R$</td>
+                </tr>
+                <tr>
+                        <td>Lápis colorido  : </td>    
+                        <td id = "colorido"></td>  
+                        <td>R$</td>
+                </tr>
+                <tr>
+                        <td>Lápis com borracha  : </td>    
+                        <td id = "comp"></td>  
+                        <td>R$</td>
+                </tr>
+        </table>
+    </body>
+</html>

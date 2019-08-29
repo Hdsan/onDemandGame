@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>mercado()</script>
+        <title>Estoque</title>
+    <style type = "text/css">
+    body {
+        background-image: url("galps.jpg");
+        background-repeat: no-repeat;
+           height:100%;
+    background-position: center;
+	background-size: 100% 100%;
+  
+        }
+        .letra{
+            color:white;
+            font-size: 17px;
+            background-color:rgba(0, 0, 255, 0.233);
+            width: 100px;
+        }
+    
+    </style>
+<script>
+ window.onload = function(){
+  var estoque = JSON.parse(window.localStorage.getItem('estoque'));
+  
+  var x = estoque.madeira;
+  var y = estoque.grafite;
+  var z = estoque.grafcor;
+  var w = estoque.borracha;
+  var a = estoque.lapis;
+  var b = estoque.colorido;
+  var c = estoque.completo;
+  
+
+  document.getElementById("madeira").innerHTML = x; 
+  document.getElementById("grafite").innerHTML = y;
+  document.getElementById("grafcor").innerHTML = z; 
+  document.getElementById("borracha").innerHTML = w;
+  document.getElementById("lapis").innerHTML = a;
+  document.getElementById("colorido").innerHTML = b; 
+  document.getElementById("completo").innerHTML = c;
+  }
+  
+    </script>
+
+</head>
+<body>
+   <div class = "bg"></div>
+    <li> <b class="letra">Estoque</b>
+     <ul class = "letra">Madeira<div id="madeira"style="background: #3e5ad4; width: 100px;height: 30px; font-size:30px;"></div></ul>
+     <ul class = "letra">Grafite<div id="grafite"style="background: #3e5ad4; width: 100px;height: 30px; font-size:30px;"></div></ul>
+     <ul class = "letra">Grafite Colorido<div id="grafcor"style="background: #3e5ad4; width: 100px;height: 30px; font-size:30px;"></div></ul>
+     <ul class = "letra">Borracha<div id="borracha"style="background: #3e5ad4; width: 100px;height: 30px; font-size:30px;"></div></ul>
+     <ul class = "letra">Lápis<div id="lapis"style="background: #3e5ad4; width: 100px;height: 30px; font-size:30px;"></div></ul>
+     <ul class = "letra">Lápis Colorido<div id="colorido"style="background: #3e5ad4; width: 100px;height: 30px; font-size:30px;"></div></ul>
+     <ul class = "letra">Lápis com borracha<div id="completo"style="background: #3e5ad4; width: 100px;height: 30px; font-size:30px;"></div></ul>
+    </li>
+</body>
+
+</html>
